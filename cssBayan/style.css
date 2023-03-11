@@ -40,8 +40,6 @@
   }
 
   .header_name{
-    /* max-height: 9rem; */
-
     justify-content: center;
     margin: 1rem auto;
     font-size:3rem;
@@ -68,18 +66,15 @@ min-height: 1000px;
     padding: 0;
     border: none;
     margin: 3rem 0;
-    /* transition: .5s; */
     border-bottom: .005rem solid #969696;
-    /* cursor: pointer; */
     transition: 2s;
+    transition:   all 2s ease-out; 
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
   }
   
-
-
   .title_meme{
 width: inherit;
     font-size: 2rem;
@@ -99,6 +94,8 @@ width: inherit;
    appearance: none;
    cursor: pointer;
    transition: 1s;
+   /* transform: translateX(0); */
+
   }
 
  
@@ -115,84 +112,47 @@ width: inherit;
     color: black;
   }
 
-  /* .meme-header{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-  } */
 
-  /* .meme_image{
-    display: none;
+  .meme_image{
+    width: 0rem;
+   height: 0rem;
     cursor: pointer;
-    transition: 1s;
-  } */
-  .meme_item:hover .meme_image{
+    margin: 1rem auto;
+   transition:  all 1s ease-out; 
+  
+  }
+ .meme_item:hover .meme_image{
     width: 30rem;
     height: 30rem;
     background-size: 100%;
-    margin: 1rem auto;
     border: .05rem solid #969696;
-    cursor: pointer;
-    transition: 3s;
+
   }
 
-  
-
-  .meme1{
+ .meme1{
     background-image: url(images/study.png);
   }
   .meme2{
     background-image: url(images/kids.png);
   }
-
-  /* .accordion_contaner:hover .meme_item:checked .meme-header .meme_icon{
-    background-image: url(svg/cross.svg);
-  } */
+  .meme3{
+    background-image: url(images/loveJS.png);
+  }
+  .meme4{
+    background-image: url(images/3rules.png);
+    
+  }
 
  .meme_item:hover .meme_icon{
-    background-image: url(svg/cross.svg);
+    transform: rotate(675deg);
+
+    /* background-image: url(svg/cross.svg); */
   }
-  .accordion_contaner:hover + .meme_item:checked + .meme_icon{
-    background-image: url(svg/cross.svg);
-  }
-/* .meme_image{
-    display: none;
-  } */
-
-/* .meme_item:hover .meme_image{
-    width: 30rem;
-    height: 30rem;
-    background-size: 100%;
-    margin: 1rem auto;
-    border: .05rem solid #969696;
-
-  } */
-
  
-
-  /* .meme_item:checked  + .meme_image{
-    width: 30rem;
-    height: 30rem;
-    background-size: 100%;
-    margin: 1rem auto;
-    border: .05rem solid #969696;
-    background-color: aqua;
- 
-  } */
-
-  .accordion_contaner:hover .meme_item:hover .meme-header .meme_icon{
-    /* cursor: pointer;
-    transition: 3s; */
-
-    background-image: url(svg/cross.svg);
-  }
-
-
-  .meme_icon:checked + .title_meme{
+ .meme_icon:checked + .title_meme{
     color: black;
-  }
+}
 
   /* save choosed meme checked */
   .meme_icon:checked + .title_meme .meme_image{
@@ -201,7 +161,10 @@ width: inherit;
     background-size: 100%;
     margin: 1rem auto;
     border: .05rem solid #969696;
-
+  }
+  .accordion_contaner:hover .meme_icon:checked {
+    /* background-image: url(svg/cross.svg); */
+    transform: rotate(675deg);
   }
  
 
