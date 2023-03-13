@@ -115,7 +115,6 @@
     .title_meme {
         font-size: 1rem;
         line-height: 1rem;
-
     }
 }
 
@@ -170,9 +169,9 @@
 
  .meme_item:hover .meme_icon{
     transform: rotate(675deg);
-
     /* background-image: url(svg/cross.svg); */
   }
+  
 
 }
 
@@ -203,6 +202,14 @@
 }
 
  /* C H E C K E D */
+
+
+ .meme_item:active  .meme_image{
+    
+  border-radius:20%;
+  transform: scale(1.1)
+
+}
 
 
  .meme_icon:checked {
